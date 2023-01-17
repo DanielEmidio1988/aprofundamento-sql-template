@@ -43,3 +43,46 @@ VALUES
 SELECT * FROM pokemons;
 
 -- Práticas
+
+SELECT * FROM pokemons
+WHERE speed > 60;
+
+SELECT * FROM pokemons
+WHERE attack >=60 and special_attack >= 60;
+
+SELECT * FROM pokemons
+WHERE name LIKE "%saur";
+
+SELECT AVG(hp)
+FROM pokemons;
+
+SELECT COUNT(*) FROM pokemons;
+
+SELECT AVG(hp) as averageOfHp FROM pokemons;
+
+SELECT * FROM pokemons
+ORDER BY defense DESC;
+
+SELECT * FROM pokemons
+ORDER BY defense ASC;
+
+SELECT
+COUNT(*) as quantityOfPokemons,
+type FROM pokemons
+GROUP BY type;
+-- busque por todos os pokemons cadastrados, mas agora agrupe o resultado baseado na sua coluna
+
+SELECT * FROM pokemons
+LIMIT 3;
+
+SELECT * FROM pokemons
+LIMIT 3 OFFSET 4;
+
+SELECT * FROM pokemons
+WHERE type = "fire" OR type = "grass";
+
+SELECT * FROM pokemons
+ORDER BY attack ASC;
+
+SELECT * FROM pokemons
+LIMIT 3 OFFSET 2;
